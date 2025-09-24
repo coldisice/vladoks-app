@@ -46,6 +46,13 @@
     color: gray;
     font-weight: 400;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.content-cards__item--description span {
+    word-break: break-all;
 }
 
 .content-cards__item--rating {

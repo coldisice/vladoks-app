@@ -1,17 +1,19 @@
-<a href="/film.html" class="content-cards__item">
+<a [routerLink]="['/film', film.id]" class="content-cards__item">
     <div class="content-cards__item--img">
-        <img src="./images/film.png" alt="film">
+        <img [src]="film.image" [alt]="film.title">
     </div>
 
     <div class="content-cards__item--title">
-        <h5>{{title}},</h5>
-        <span>2023</span>
+        <h5>{{film.title}}</h5>
+        <span>{{film.year}}</span>
     </div>
     <p class="content-cards__item--description">
-        Семейная комедия
+        @for (category of film.category; track category){
+        <span>{{category}}</span>
+        }
     </p>
 
     <p class="content-cards__item--rating">
-        8.2
+        {{film.rating}}
     </p>
 </a>
